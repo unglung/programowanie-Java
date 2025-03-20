@@ -1,24 +1,24 @@
 public class BankAccount {
-    private double saldo;
+    private double balance;
 
-    public void wplata(double kwota) {
-        if (kwota <= 0) {
-            throw new IllegalArgumentException("Kwota wpłaty musi być większa od zera.");
+    public void deposit(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("kwota wpłaty musi być większa od zera");
         }
-        saldo += kwota;
+        balance += amount;
     }
 
-    public void wyplata(double kwota) {
-        if (kwota <= 0) {
-            throw new IllegalArgumentException("Kwota wypłaty musi być większa od zera.");
+    public void withdraw(double amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("kwota wypłaty musi być większa od zera");
         }
-        if (kwota > saldo) {
-            throw new IllegalStateException("Brak wystarczających środków na koncie.");
+        if (amount > balance) {
+            throw new IllegalStateException("brak wystarczających środków na koncie");
         }
-        saldo -= kwota;
+        balance -= amount;
     }
 
-    public double getSaldo() {
-        return saldo;
+    public double getBalance() {
+        return balance;
     }
 }

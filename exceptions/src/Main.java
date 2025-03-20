@@ -1,16 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        BankAccount konto = new BankAccount();
+        BankAccount account = new BankAccount();
 
         try {
-            konto.wplata(100);
-            System.out.println("Saldo po wpłacie: " + konto.getSaldo());
+            account.deposit(100);
+            System.out.println("Saldo po wpłacie: " + account.getBalance());
 
-            konto.wyplata(50);
-            System.out.println("Saldo po wypłacie: " + konto.getSaldo());
+            account.withdraw(50);
+            System.out.println("Saldo po wypłacie: " + account.getBalance());
 
-            konto.wyplata(100);
-        } catch (IllegalArgumentException | IllegalStateException e) {
+            // sprawdzanie błedów
+            account.withdraw(-100);
+        } catch (Exception e) {
             System.out.println("Błąd: " + e.getMessage());
         }
     }
