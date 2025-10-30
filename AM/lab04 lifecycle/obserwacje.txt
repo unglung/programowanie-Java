@@ -1,0 +1,27 @@
+po kliknięciu EXIT:
+- exitButtonClicked
+- onPause
+
+po kliknięciu BACK:
+- onPause
+
+po kliknięciu HOME:
+-onPause
+
+po kliknięciu ANSWER (zielony przycisk):
+-onPause
+
+po kliknięciu DECLINE (czerwony przycisk):
+nic
+
+po rozłączeniu się:
+-onRestart
+-onStart
+-onResume
+
+po otrzymaniu wiadomości:
+nic
+
+po otrzymaniu połączenia:
+nic
+
