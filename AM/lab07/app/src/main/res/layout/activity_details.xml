@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/imageDetails"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_details"
+            android:contentDescription="Detailed Image" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Po latach zmagań John został najlepszym gitarzystą rockowym w historii, przebijając legendy takie jak Jimi Hendrix, Eric Clapton, Slash, Jimmy Page i Eddie Van Halen.
+Jego osiągnięcia były rekordowe: najszybsze solo w dziejach, 30 platynowych albumów, największa trasa koncertowa w USA i tytuł „Rockowego Cudu Stulecia”."
+            android:textSize="18sp"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Powrót"
+            android:layout_marginTop="30dp"/>
+    </LinearLayout>
+
+</ScrollView>
