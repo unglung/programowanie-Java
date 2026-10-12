@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/"
+      version="1"
+      bind-to-class="SwingWorker">
+
+  <grid id="mainPanel"
+        binding="panelGlowny"
+        layout-manager="BorderLayout"
+        hgap="5"
+        vgap="5">
+
+    <constraints>
+      <xy x="0" y="0" width="500" height="400"/>
+    </constraints>
+
+    <properties>
+      <preferredSize width="500" height="400"/>
+    </properties>
+
+    <border type="none"/>
+
+    <children>
+
+      <!-- Środkowe pole raportu -->
+      <scrollpane id="scrollRaportu">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+
+        <children>
+          <component id="textAreaRaportu"
+                     class="javax.swing.JTextArea"
+                     binding="poleRaportu">
+            <constraints/>
+            <properties>
+              <editable value="true"/>
+              <lineWrap value="true"/>
+              <wrapStyleWord value="true"/>
+              <text value=""/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+
+      <!-- Dolny panel -->
+      <grid id="bottomPanel"
+            binding="panelDolny"
+            layout-manager="GridLayoutManager"
+            row-count="2"
+            column-count="1"
+            same-size-horizontally="false"
+            same-size-vertically="false">
+
+        <margin top="5" left="5" bottom="5" right="5"/>
+
+        <constraints border-constraint="South"/>
+
+        <properties/>
+
+        <border type="none"/>
+
+        <children>
+
+          <!-- Przycisk generowania -->
+          <component id="generateButton"
+                     class="javax.swing.JButton"
+                     binding="przyciskGeneruj">
+            <constraints>
+              <grid row="0"
+                    column="0"
+                    row-span="1"
+                    col-span="1"
+                    vsize-policy="0"
+                    hsize-policy="3"
+                    anchor="0"
+                    fill="1"
+                    indent="0"
+                    use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Generuj Raport w Tle"/>
+            </properties>
+          </component>
+
+          <!-- Pasek postępu -->
+          <component id="progressBar"
+                     class="javax.swing.JProgressBar"
+                     binding="pasekPostepu">
+            <constraints>
+              <grid row="1"
+                    column="0"
+                    row-span="1"
+                    col-span="1"
+                    vsize-policy="0"
+                    hsize-policy="3"
+                    anchor="0"
+                    fill="1"
+                    indent="0"
+                    use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <minimum value="0"/>
+              <maximum value="100"/>
+              <value value="0"/>
+              <stringPainted value="true"/>
+            </properties>
+          </component>
+
+        </children>
+      </grid>
+
+    </children>
+  </grid>
+</form>
