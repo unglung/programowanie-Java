@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rodzaj przesyłki"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/groupShipmentType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/radioPostcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Pocztówka" />
+
+            <RadioButton
+                android:id="@+id/radioLetter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="List" />
+
+            <RadioButton
+                android:id="@+id/radioPackage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paczka" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonCheckPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sprawdź Cenę" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageShipment"
+                android:layout_width="120dp"
+                android:layout_height="90dp"
+                android:contentDescription="Rodzaj przesyłki"
+                android:src="@drawable/pocztowka" />
+
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Cena: "
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dane adresowe"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ulica z numerem" />
+
+        <EditText
+            android:id="@+id/editStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kod pocztowy" />
+
+        <EditText
+            android:id="@+id/editPostalCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Miasto" />
+
+        <EditText
+            android:id="@+id/editCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Zatwierdź" />
+    </LinearLayout>
+</ScrollView>
